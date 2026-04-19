@@ -36,7 +36,6 @@ jobs:
             tinyalsa/src/pcm_hw.c \
             tinyalsa/src/mixer.c \
             tinyalsa/src/mixer_hw.c \
-            tinyalsa/src/snd_utils.c \
             -I tinyalsa/include \
             -o bridge \
             -laaudio -llog
