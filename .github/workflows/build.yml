@@ -33,7 +33,10 @@ jobs:
           $TOOLCHAIN/bin/aarch64-linux-android26-clang \
             bridge.c \
             tinyalsa/src/pcm.c \
+            tinyalsa/src/pcm_hw.c \
             tinyalsa/src/mixer.c \
+            tinyalsa/src/mixer_hw.c \
+            tinyalsa/src/snd_utils.c \
             -I tinyalsa/include \
             -o bridge \
             -laaudio -llog
