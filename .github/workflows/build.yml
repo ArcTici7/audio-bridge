@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y unzip git wget
+          sudo apt-get install -y unzip git wget findutils
 
       - name: Download Android NDK
         run: |
@@ -30,12 +30,12 @@ jobs:
           export NDK=$PWD/android-ndk-r26d
           export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
 
+          # 🔥 IMPORTANT: compile ALL tinyalsa sources to avoid missing symbols
+          TINYALSA_SRC=$(find tinyalsa/src -name "*.c")
+
           $TOOLCHAIN/bin/aarch64-linux-android26-clang \
             bridge.c \
-            tinyalsa/src/pcm.c \
-            tinyalsa/src/pcm_hw.c \
-            tinyalsa/src/mixer.c \
-            tinyalsa/src/mixer_hw.c \
+            $TINYALSA_SRC \
             -I tinyalsa/include \
             -o bridge \
             -laaudio -llog
