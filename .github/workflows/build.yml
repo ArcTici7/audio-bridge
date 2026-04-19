@@ -1,4 +1,4 @@
-name: Build Android ARM64 Binary
+name: Build Android ARM64 Audio Bridge
 
 on:
   workflow_dispatch:
@@ -8,26 +8,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install Android NDK
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip git
+
+      - name: Download Android NDK
         run: |
           wget https://dl.google.com/android/repository/android-ndk-r26d-linux.zip
           unzip android-ndk-r26d-linux.zip
 
-      - name: Compile
+      - name: Clone tinyalsa
+        run: |
+          git clone https://github.com/tinyalsa/tinyalsa.git
+
+      - name: Compile bridge (ARM64)
         run: |
           export NDK=$PWD/android-ndk-r26d
           export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
 
           $TOOLCHAIN/bin/aarch64-linux-android21-clang \
-            bridge.c -o bridge \
-            -I$NDK/sysroot/usr/include \
-            -L$NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/21 \
-            -laaudio
+            bridge.c \
+            tinyalsa/src/pcm.c \
+            tinyalsa/src/mixer.c \
+            -I tinyalsa/include \
+            -o bridge
 
-      - name: Upload artifact
+      - name: Upload binary
         uses: actions/upload-artifact@v4
         with:
           name: bridge-binary
