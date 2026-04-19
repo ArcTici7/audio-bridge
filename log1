@@ -1,0 +1,514 @@
+1|joyeuse:/ # dmesg | grep -i -E "dwc3|usb|reset|uac|error"
+[    0.000000] Kernel command line: cgroup_disable=pressure rcupdate.rcu_expedited=1 rcu_nocbs=0-7 noirqdebug androidboot.console=ttyMSM0 androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3 cgroup.memory=nokmem,nosocket console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa88000 loop.max_part=7 lpm_levels.sleep_disabled=1 msm_rtb.enabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 video=vfb:640x400,bpp=32,memsize=3072000 androidboot.verifiedbootstate=orange androidboot.keymaster=1  androidboot.bootdevice=1d84000.ufshc androidboot.fstab_suffix=default androidboot.boot_devices=soc/1d84000.ufshc androidboot.serialno=a5d40b67 androidboot.cpuid=0x86e494e1 androidboot.multisim_config=dsds androidboot.dp=0x0 androidboot.baseband=msm msm_drm.dsi_display0=dsi_ft8756_huaxing_vid_display: androidboot.fpsensor=gdx androidboot.lcmtype=dsi_nt36672c_huaxing_fhd_video_display androidboot.dtbo_idx=3 androidboot.dtb_idx=0 androidboot.secureboot=1 androidboot.hwc
+[    0.210585] exit: IPA_USB init success!
+[    0.210837] persistent_ram: error in header, 3
+[    0.756702] persistent_ram: error in header, 3
+[    1.859846] pstore: allocate compression buffer error!
+[    1.943893] usbcore: registered new interface driver usbfs
+[    1.943900] usbcore: registered new interface driver hub
+[    1.943910] usbcore: registered new device driver usb
+[    1.944136] usb_phy_generic soc:usb_nop_phy: soc:usb_nop_phy supply vcc not found, using dummy regulator
+[    1.944279] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm6150@0:qcom,power-on@800: PMIC@SID0 Power-on reason: Triggered from Hard Reset and 'cold' boot
+[    2.035310] diag: MUX: unable to register PCIe operations, continuing with USB registrations for proc: 0, err: -22
+[    2.041488] AXI: get_pdata(): Error: Client name not found
+[    2.041738] msm-dsi-panel:[dsi_panel_parse_reset_sequence:2022] RESET SEQ LENGTH = 24
+[    2.046454] [drm:reg_dmav1_init_sspp_op_v4] *ERROR* invalid feature map 12 for feature 31
+[    2.046839] [drm:reg_dmav1_init_sspp_op_v4] *ERROR* invalid feature map 12 for feature 31
+[    2.086726] AXI: get_pdata(): Error: Client name not found
+[    2.107233] usbcore: registered new interface driver r8152
+[    2.107240] usbcore: registered new interface driver asix
+[    2.107264] usbcore: registered new interface driver ax88179_178a
+[    2.107269] usbcore: registered new interface driver cdc_ether
+[    2.107277] usbcore: registered new interface driver net1080
+[    2.107282] usbcore: registered new interface driver cdc_subset
+[    2.107287] usbcore: registered new interface driver zaurus
+[    2.107404] usbcore: registered new interface driver cdc_ncm
+[    2.110830] msm-qusb-phy-v2 88e3000.qusb: can't create debugfs root for 88e3000.qusb
+[    2.111353] iommu: Adding device a600000.ssusb to group 21
+[    2.111458] msm-dwc3 a600000.ssusb: USB core frequency = 133333333
+[    2.111478] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    2.112133] msm-dwc3 a600000.ssusb: IOMMU mapping created: 000000006acb0872
+[    2.112488] msm-dwc3 a600000.ssusb: attached to IOMMU
+[    2.112777] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    2.112806] dwc3 a600000.dwc3: changing max_speed on rev 00000000
+[    2.113572] register_client_adhoc:Client handle 27 usb0
+[    2.113638] msm-dwc3 a600000.ssusb: setting pm-qos-latency to zero.
+[    2.114345] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_FREE
+[    2.115306] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.115511] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.115912] usbcore: registered new interface driver usb-storage
+[    2.115929] usbcore: registered new interface driver usb_ehset_test
+[    2.115939] usbcore: registered new interface driver lvs
+[    2.117056] qpnp-pdphy c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700: usbpd_create failed: -517
+[    2.117421] usbcore: registered new interface driver xpad
+[    2.117485] [FTS_TS/I]fts_parse_dt:max touch number:10, irq gpio:9, reset gpio:8
+[    2.144832] fpc1020: probe of soc:fpc1020 failed with error -1
+[    2.146641] nq-nci 0-0028: ese GPIO <OPTIONAL> error getting from OF node
+[    2.146708] aw8624_haptic 1-005a: aw8624_parse_dt: reset gpio provided ok
+[    2.221234] aw8624_haptic: probe of 1-005a failed with error -22
+[    2.221425] drv2624 1-005a: ti,reset-gpio=52
+[    2.221457] drv2624 1-005a: drv2624_hw_reset: enter!
+[    2.254893] NPU_ERR: npu_debugfs_init: 367 debugfs_create_dir for npu failed, error -19
+[    2.277030] CAM_ERR: CAM-ISP: cam_vfe_core_init: 875 Error! RD cam_vfe_bus_init failed
+[    2.278830] CAM_ERR: CAM-ISP: cam_vfe_core_init: 875 Error! RD cam_vfe_bus_init failed
+[    2.305783] usbcore: registered new interface driver uvcvideo
+[    2.305787] USB Video Class driver (1.1.1)
+[    2.601111] bt_power_populate_dt_pinfo: bt-reset-gpio not provided in device tree
+[    2.602874] usbcore: registered new interface driver usbhid
+[    2.602876] usbhid: USB HID core driver
+[    2.651173] usbcore: registered new interface driver snd-usb-audio
+[    2.651275] iommu: Adding device soc:usb_audio_qmi_dev to group 34
+[    2.655107] tas2562 1-004c: ti,reset-gpio=51
+[    2.697054] tas2562 1-004c: reset gpio up !!
+[    2.697060] tas2562 1-004c: Before SW reset
+[    2.697215] i2c_geni 890000.i2c: i2c error :-107
+[    2.718178] i2c_geni 890000.i2c: i2c error :-107
+[    2.739179] i2c_geni 890000.i2c: i2c error :-107
+[    2.760055] tas2562 1-004c: tas2562_change_book_page, ERROR, L=183, E=-2
+[    2.760080] tas2562: probe of 1-004c failed with error -2
+[    2.760369] tas2562 2-004c: ti,reset-gpio=51
+[    2.802039] tas2562 2-004c: reset gpio up !!
+[    2.802043] tas2562 2-004c: Before SW reset
+[    2.803219] tas2562 2-004c: After SW reset
+[    2.803711] [TI-SmartPA:register_tas2562_reset_func]
+[    2.839488] msm-dwc3 a600000.ssusb: USB core frequency = 133333333
+[    2.839511] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    2.839951] msm-dwc3 a600000.ssusb: IOMMU mapping created: 000000000bee655c
+[    2.840387] msm-dwc3 a600000.ssusb: attached to IOMMU
+[    2.840745] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    2.840795] dwc3 a600000.dwc3: changing max_speed on rev 00000000
+[    2.841696] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (a704000.qcom,usbbam)
+[    2.842401] register_client_adhoc:Client handle 50 usb0
+[    2.842557] msm-dwc3 a600000.ssusb: setting pm-qos-latency to zero.
+[    2.843411] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_FREE
+[    2.843574] usb_bam_ipa_delete_resources: Failed to delete USB_PROD resource
+[    2.843584] usb_bam_ipa_delete_resources: Failed to delete USB_CONS resource
+[    2.845227] qpnp-pdphy c440000.qcom,spmi:qcom,pm6150@0:qcom,usb-pdphy@1700: usbpd_create failed: -517
+[    3.233862] [ds28e16] AuthenticateDS28E16: DS28E16_cmd_readMemory error
+[    3.304459] pm6150_charger: smblib_set_charge_param: usb otg current limit = 1000000 (0x01)
+[    3.304464] USB_ICL: DEFAULT_VOTER,0 voting off of val=0
+[    3.304469] USB_ICL: current vote is now -22 voted by (null),-22, previous voted -22
+[    3.305637] [PMIC_DEBUG][usb_plugin_irq_handler]: pd_hard_reset=0
+[    3.306551] pm6150_charger: smblib_usb_plugin_locked: IRQ: usbin-plugin attached
+[    3.306674] USB_ICL: USB_PSY_VOTER,3 voting on of val=500000
+[    3.306678] USB_ICL: current vote is now 500000 voted by USB_PSY_VOTER,3, previous voted -22
+[    3.306701] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x11
+[    3.306727] pm6150_charger: smblib_update_usb_type: APSD=SDP PD=0
+[    3.306776] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x11
+[    3.313325] USB_LIMITED_IRQ_DISABLE: CHARGER_TYPE_VOTER,0 voting on of val=1
+[    3.313332] USB_LIMITED_IRQ_DISABLE: current vote is now 1 voted by CHARGER_TYPE_VOTER,0, previous voted 0
+[    3.313339] USB_HDC_IRQ_DISABLE: CHARGER_TYPE_VOTER,0 voting on of val=1
+[    3.313342] USB_HDC_IRQ_DISABLE: current vote is now 1 voted by CHARGER_TYPE_VOTER,0, previous voted 0
+[    3.313449] SMB5 status - usb:present=1 type=4 batt:present = 1 health = 1 charge = 3
+[    3.333523] msm-dwc3 a600000.ssusb: USB core frequency = 133333333
+[    3.333546] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    3.334231] msm-dwc3 a600000.ssusb: IOMMU mapping created: 000000000cd71ffa
+[    3.334666] msm-dwc3 a600000.ssusb: attached to IOMMU
+[    3.335083] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    3.335135] dwc3 a600000.dwc3: changing max_speed on rev 00000000
+[    3.335958] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (a704000.qcom,usbbam)
+[    3.336635] register_client_adhoc:Client handle 50 usb0
+[    3.401459] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 voting off of val=0
+[    3.401463] PL_ENABLE_INDIRECT: current vote is now 0 voted by USBIN_I_VOTER,0, previous voted 0
+[    3.401651] USB_ICL_IRQ_DISABLE: USB_SUSPEND_VOTER,0 voting off of val=0
+[    3.401655] USB_ICL_IRQ_DISABLE: current vote is now 0 voted by USB_SUSPEND_VOTER,0, previous voted 0
+[    3.728952] msm-dwc3 a600000.ssusb: setting pm-qos-latency to zero.
+[    3.729848] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_FREE
+[    3.730005] usb_bam_ipa_delete_resources: Failed to delete USB_PROD resource
+[    3.730032] usb_bam_ipa_delete_resources: Failed to delete USB_CONS resource
+[    3.732795] usbpd usbpd0: Type-C Source (high - 3.0A) connected
+[    3.733249] pm6150_charger: smblib_usb_pd_adapter_allowance_override: set USBIN_ALLOW_OVERRIDE: 8
+[    3.733529] i2c_geni a8c000.i2c: i2c error :-107
+[    3.734608] i2c_geni a8c000.i2c: i2c error :-107
+[    3.735561] i2c_geni a8c000.i2c: i2c error :-107
+[    3.736509] i2c_geni a8c000.i2c: i2c error :-107
+[    3.737449] i2c_geni a8c000.i2c: i2c error :-107
+[    3.738401] i2c_geni a8c000.i2c: i2c error :-107
+[    3.739373] i2c_geni a8c000.i2c: i2c error :-107
+[    3.740327] i2c_geni a8c000.i2c: i2c error :-107
+[    3.741285] i2c_geni a8c000.i2c: i2c error :-107
+[    3.742424] i2c_geni a8c000.i2c: i2c error :-107
+[    3.743045] msm-dwc3 a600000.ssusb: USB core frequency = 133333333
+[    3.743067] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    3.743702] msm-dwc3 a600000.ssusb: IOMMU mapping created: 0000000035c0a217
+[    3.744442] msm-dwc3 a600000.ssusb: attached to IOMMU
+[    3.744852] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    3.744904] dwc3 a600000.dwc3: changing max_speed on rev 00000000
+[    3.745928] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (a704000.qcom,usbbam)
+[    3.746820] register_client_adhoc:Client handle 50 usb0
+[    3.747122] msm-dwc3 a600000.ssusb: setting pm-qos-latency to zero.
+[    3.747139] msm-dwc3 a600000.ssusb: vbus:1 event received
+[    3.747165] msm-dwc3 a600000.ssusb: dwc3_resume_work: dwc3 resume work
+[    3.747177] msm-dwc3 a600000.ssusb: XCVR: ID set
+[    3.747181] msm-dwc3 a600000.ssusb: XCVR: BSV set
+[    3.747185] msm-dwc3 a600000.ssusb: XCVR: SUSP clear
+[    3.747203] msm-dwc3 a600000.ssusb: undefined state
+[    3.747211] msm-dwc3 a600000.ssusb: b_sess_vld
+[    3.747218] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[    3.747224] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[    3.747421] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    3.748913] msm-dwc3 a600000.ssusb: attached to IOMMU
+[    3.748918] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    3.749365] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_POST_RESET_EVENT received
+[    3.749433] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[    3.749443] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=0
+[    3.749459] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget dwc3-gadget
+[    3.750348] Error: swapper/0: fastrpc_device_init: failed to create debugfs root dir
+[    3.750729] msm-dwc3 a600000.ssusb: peripheral state
+[    3.959846] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[    3.959856] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=4
+[    3.960143] EXT4-fs (sda12): mounted filesystem with ordered data mode. Opts: errors=remount-ro
+[    4.233419] pm6150_charger: smblib_usb_pd_adapter_allowance_override: set USBIN_ALLOW_OVERRIDE: 1
+[    4.312860] init: Added '/system/etc/init/hw/init.usb.rc' to import list
+[    4.312881] init: Added '/system/etc/init/hw/init.usb.configfs.rc' to import list
+[    4.314887] init: Parsing file /system/etc/init/hw/init.usb.rc...
+[    4.316082] init: Added '/vendor/etc/init/hw/init.qcom.usb.rc' to import list
+[    4.317399] audit: type=1107 audit(16997827.051:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc:  denied  { read } for property=persist.usb.hvdcp.detect pid=0 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0'
+[    4.317421] init: /vendor/etc/init/hw/init.qcom.rc: 635: ParseTriggers() failed: unexported property trigger found: persist.usb.hvdcp.detect
+[    4.317466] audit: type=1107 audit(16997827.051:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc:  denied  { read } for property=persist.usb.hvdcp.detect pid=0 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0'
+[    4.317470] init: /vendor/etc/init/hw/init.qcom.rc: 638: ParseTriggers() failed: unexported property trigger found: persist.usb.hvdcp.detect
+[    4.317692] init: Parsing file /vendor/etc/init/hw/init.qcom.usb.rc...
+[    4.322703] init: Parsing file /system/etc/init/hw/init.usb.configfs.rc...
+[    4.334303] init: Parsing file /system/etc/init/rss_hwm_reset.rc...
+[    4.336170] init: Parsing file /system/etc/init/usbd.rc...
+[    4.342436] init: Parsing file /vendor/etc/init/android.hardware.usb@1.3-service.dual_role_usb.rc...
+[    5.426662] init: processing action (init) from (/system/etc/init/hw/init.usb.rc:28)
+[    5.471615] cutils-trace: Error opening trace file: No such file or directory (2)
+[    5.564807] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: errors=remount-ro
+[    5.631488] cutils-trace: Error opening trace file: No such file or directory (2)
+[    5.716466] vold: Error getting bootctrl v1.0 module.
+[    5.824164] fsck.f2fs: Info: No error was reported
+[    5.917000] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Brought out of reset
+[    6.013838] vold: keystore2 Keystore earlyBootEnded returned service specific error: -68
+[    6.028409] logd: FrameworkListener: read() failed (Connection reset by peer)
+[    7.638132] init: processing action (post-fs-data) from (/system/etc/init/hw/init.usb.rc:6)
+[    7.718980] NetBpfLoad: bpf_create_map[tether_error_map] -> 5
+[    7.719061] NetBpfLoad: map /sys/fs/bpf/tethering/map_offload_tether_error_map id 1
+[    7.744278] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_downstream4_rawip, ret: 22 (no error)
+[    7.744295] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_upstream4_rawip, ret: 23 (no error)
+[    7.744311] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_downstream4_ether, ret: 24 (no error)
+[    7.744326] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_upstream4_ether, ret: 25 (no error)
+[    7.744342] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_downstream4_rawip, ret: 26 (no error)
+[    7.744357] NetBpfLoad: New bpf prog load reusing prog /sys/fs/bpf/tethering/prog_offload_schedcls_tether_upstream4_rawip, ret: 27 (no error)
+[    7.790992] pm6150_charger: smblib_usb_pd_adapter_allowance_override: set USBIN_ALLOW_OVERRIDE: 0
+[    7.791037] pm6150_charger: smblib_update_usb_type: APSD=SDP PD=0
+[    7.791088] usbpd usbpd0: typec mode:8 type:4
+[    7.838259] init: processing action (zygote-start) from (/vendor/etc/init/hw/init.qcom.usb.rc:52)
+[    7.838415] init: Command 'mount configfs none /config' action=zygote-start (/vendor/etc/init/hw/init.qcom.usb.rc:53) took 0ms and failed: mount() failed: Device or resource busy
+[    7.854643] f_cdev_alloc: port_name:at_usb0 (0000000000000000) portno:(0)
+[    7.857545] f_cdev_alloc: port_name:at_usb1 (0000000000000000) portno:(1)
+[    7.858266] f_cdev_alloc: port_name:at_usb2 (0000000000000000) portno:(2)
+[    7.887711] init: Command 'write /config/usb_gadget/g1/functions/ncm.gs6/ifname ncm%d' action=zygote-start (/vendor/etc/init/hw/init.qcom.usb.rc:169) took 0ms and failed: Unable to write to file '/config/usb_gadget/g1/functions/ncm.gs6/ifname': open() failed: Permission denied
+[    7.888203] init: Command 'write /config/usb_gadget/g1/functions/diag.diag/serial ${ro.serialno}' action=zygote-start (/vendor/etc/init/hw/init.qcom.usb.rc:171) took 0ms and failed: Unable to write to file '/config/usb_gadget/g1/functions/diag.diag/serial': open() failed: Permission denied
+[    7.893496] init: starting service 'exec 14 (/vendor/bin/init.qcom.usb.sh)'...
+[    7.894877] init: ... started service 'exec 14 (/vendor/bin/init.qcom.usb.sh)' has pid 917
+[    7.894904] init: SVC_EXEC service 'exec 14 (/vendor/bin/init.qcom.usb.sh)' pid 917 (uid 0 gid 1000+1 context u:r:vendor_qti_init_shell:s0) started; waiting...
+[    8.080569] init: Service 'exec 14 (/vendor/bin/init.qcom.usb.sh)' (pid 917) exited with status 0 waiting took 0.186000 seconds
+[    8.080642] init: Sending signal 9 to service 'exec 14 (/vendor/bin/init.qcom.usb.sh)' (pid 917) process group...
+[    8.290123] subsys-pil-tz 62400000.qcom,lpass: adsp: Brought out of reset
+[    8.316751] subsys-pil-tz 8300000.qcom,turing: cdsp: Brought out of reset
+[    8.328187] subsys-pil-tz 8300000.qcom,turing: Subsystem error monitoring/handling services are up
+[    8.394742] subsys-pil-tz 9800000.qcom,npu: npu: Brought out of reset
+[    8.449162] subsys-pil-tz 62400000.qcom,lpass: Subsystem error monitoring/handling services are up
+[    8.647227] init: starting service 'vendor.usb-hal-1-3'...
+[    8.653966] init: ... started service 'vendor.usb-hal-1-3' has pid 1065
+[    8.906691] init: processing action (persist.sys.usb.config=* && boot) from (/system/etc/init/hw/init.usb.rc:109)
+[    8.958653] init: starting service 'exec 18 (/system/bin/profcollectctl reset)'...
+[    8.960402] init: ... started service 'exec 18 (/system/bin/profcollectctl reset)' has pid 1150
+[    9.078324] init: Service 'exec 18 (/system/bin/profcollectctl reset)' (pid 1150) exited with status 0 oneshot service took 0.118000 seconds in background
+[    9.078334] init: Sending signal 9 to service 'exec 18 (/system/bin/profcollectctl reset)' (pid 1150) process group...
+[    9.524607] init: processing action (sys.usb.config=adb && sys.usb.configfs=0) from (/system/etc/init/hw/init.usb.rc:41)
+[    9.525829] init: Command 'write /sys/class/android_usb/android0/enable 0' action=sys.usb.config=adb && sys.usb.configfs=0 (/system/etc/init/hw/init.usb.rc:42) took 1ms and failed: Unable to write to file '/sys/class/android_usb/android0/enable': open() failed: Permission denied
+[    9.527175] init: Command 'write /sys/class/android_usb/android0/idVendor 18d1' action=sys.usb.config=adb && sys.usb.configfs=0 (/system/etc/init/hw/init.usb.rc:43) took 1ms and failed: Unable to write to file '/sys/class/android_usb/android0/idVendor': open() failed: Permission denied
+[    9.528513] init: Command 'write /sys/class/android_usb/android0/idProduct 4EE7' action=sys.usb.config=adb && sys.usb.configfs=0 (/system/etc/init/hw/init.usb.rc:44) took 1ms and failed: Unable to write to file '/sys/class/android_usb/android0/idProduct': open() failed: Permission denied
+[    9.529772] init: Command 'write /sys/class/android_usb/android0/functions ${sys.usb.config}' action=sys.usb.config=adb && sys.usb.configfs=0 (/system/etc/init/hw/init.usb.rc:45) took 1ms and failed: Unable to write to file '/sys/class/android_usb/android0/functions': open() failed: Permission denied
+[    9.530999] init: Command 'write /sys/class/android_usb/android0/enable 1' action=sys.usb.config=adb && sys.usb.configfs=0 (/system/etc/init/hw/init.usb.rc:46) took 1ms and failed: Unable to write to file '/sys/class/android_usb/android0/enable': open() failed: Permission denied
+[    9.555246] init: processing action (vendor.usb.controller=* && vendor.usb.use_gadget_hal=0) from (/vendor/etc/init/hw/init.qcom.usb.rc:204)
+[    9.559187] init: processing action (vendor.usb.uac2.function.init=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:2163)
+[    9.560278] init: Command 'write /config/usb_gadget/g1/functions/uac2.0/c_sync adaptive' action=vendor.usb.uac2.function.init=1 (/vendor/etc/init/hw/init.qcom.usb.rc:2166) took 0ms and failed: Unable to write to file '/config/usb_gadget/g1/functions/uac2.0/c_sync': open() failed: Permission denied
+[    9.567537] subsys-pil-tz aae0000.qcom,venus: venus: Brought out of reset
+[    9.619045] subsys-pil-tz soc:qcom,kgsl-hyp: a615_zap: Brought out of reset
+[   10.178402] subsys-pil-tz 4080000.qcom,mss: modem: Brought out of reset
+[   10.200965] subsys-pil-tz 4080000.qcom,mss: Subsystem error monitoring/handling services are up
+[   10.620353] init: starting service 'usbd'...
+[   10.629454] init: ... started service 'usbd' has pid 1541
+[   10.664443] cnss-daemon: interop issues ap: read_iot_ap_ps_from_file, read file error
+[   10.775485] init: Control message: Processed ctl.start for 'adbd' from pid: 1541 (/system/bin/usbd)
+[   10.790536] servicemanager: Caller(pid=1541,uid=0,sid=u:r:usbd:s0) Could not find android.hardware.usb.gadget.IUsbGadget/default in the VINTF manifest. No alternative instances declared in VINTF.
+[   10.829951] init: Service 'usbd' (pid 1541) exited with status 0 oneshot service took 0.205000 seconds in background
+[   10.830003] init: Sending signal 9 to service 'usbd' (pid 1541) process group...
+[   10.852762] init: processing action (sys.usb.config=* && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:217)
+[   10.852967] init: Command 'rm /config/usb_gadget/g1/os_desc/b.1' action=sys.usb.config=* && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:218) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853095] init: processing action (sys.usb.config=adb && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:1911)
+[   10.853191] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1912) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853260] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1913) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853330] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1914) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853394] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f4' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1915) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853458] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f5' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1916) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853523] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f6' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1917) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853586] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f7' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1918) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853649] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f8' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1919) took 0ms and failed: unlink() failed: No such file or directory
+[   10.853711] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f9' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1920) took 0ms and failed: unlink() failed: No such file or directory
+[   10.855094] init: processing action (sys.usb.config=adb && sys.usb.configfs=1) from (/system/etc/init/hw/init.usb.configfs.rc:17)
+[   10.855125] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[   10.855899] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   10.855909] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[   10.855913] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[   10.855918] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[   10.855923] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[   10.865903] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   10.866396] msm-dwc3 a600000.ssusb: Avail curr from USB = 2
+[   10.868230] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[   10.868745] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:22) took 0ms and failed: symlink() failed: File exists
+[   10.868963] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: Unable to write to file '/config/usb_gadget/g1/UDC': Unable to write file contents: Device or resource busy
+[   10.920060] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[   10.920686] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:22) took 0ms and failed: symlink() failed: File exists
+[   10.921234] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: Unable to write to file '/config/usb_gadget/g1/UDC': Unable to write file contents: Device or resource busy
+[   10.959821] USB_ICL: CTM_VOTER,9 voting off of val=-1000
+[   10.960377] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   10.960390] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   10.960420] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   10.960450] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[   10.987809] gf_parse_dts: reset_gpio=91
+[   11.028348] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   11.062112] android_work: sent uevent USB_STATE=CONNECTED
+[   11.156046] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   11.156295] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[   11.156511] android_work: sent uevent USB_STATE=CONFIGURED
+[   12.368187] afe_apr_send_pkt: DSP returned error[ADSP_EBADPARAM]
+[   12.368193] msm_doa_tracking_mon_get: Error getting Doa Tracking Params, err=-22
+[   12.646085] afe_apr_send_pkt: DSP returned error[ADSP_EBADPARAM]
+[   12.646104] msm_doa_tracking_mon_get: Error getting Doa Tracking Params, err=-22
+[   13.842463] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   13.842959] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   13.842976] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[   13.843181] dwc3 a600000.dwc3: request 0000000000000000 was not queued to ep0out
+[   13.893237] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   13.893260] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[   13.893267] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[   13.893274] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[   13.893282] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[   13.894689] android_work: sent uevent USB_STATE=DISCONNECTED
+[   13.899753] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   13.899776] msm-dwc3 a600000.ssusb: Avail curr from USB = 2
+[   13.945153] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   13.945191] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   13.945202] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[   13.948943] dwc3 a600000.dwc3: request 0000000000000000 was not queued to ep0out
+[   13.952396] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[   13.952918] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:22) took 0ms and failed: symlink() failed: File exists
+[   13.996068] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   13.996080] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[   13.996084] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[   13.996088] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[   13.996093] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[   14.002631] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   14.097052] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[   14.097058] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   14.097081] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   14.097097] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[   14.164956] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   14.198750] android_work: sent uevent USB_STATE=CONNECTED
+[   14.260936] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[   14.261120] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[   14.261420] android_work: sent uevent USB_STATE=CONFIGURED
+[   16.770914] CAM_ERR: CAM-CCI: cam_cci_irq: 228 Base:0000000000000000, M0 NACK ERROR: 0x8000000
+[   17.969815] servicemanager: Caller(pid=1589,uid=1000,sid=u:r:system_server:s0) Could not find android.hardware.usb.gadget.IUsbGadget/default in the VINTF manifest. No alternative instances declared in VINTF.
+[   17.983209] servicemanager: Caller(pid=1589,uid=1000,sid=u:r:system_server:s0) Could not find android.hardware.usb.IUsb/default in the VINTF manifest. No alternative instances declared in VINTF.
+[   18.294604] CAM_ERR: CAM-CCI: cam_cci_irq: 228 Base:0000000000000000, M0 NACK ERROR: 0x8000000
+[   19.832767] CAM_ERR: CAM-CCI: cam_cci_irq: 228 Base:0000000000000000, M0 NACK ERROR: 0x8000000
+[   26.130764] init: starting service 'exec 42 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)'...
+[   26.132363] init: ... started service 'exec 42 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' has pid 3109
+[   26.238694] init: Service 'exec 42 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 3109) exited with status 0 oneshot service took 0.106000 seconds in background
+[   26.238724] init: Sending signal 9 to service 'exec 42 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 3109) process group...
+[   26.314632] batterysecret: get charge type /sys/class/power_supply/usb/real_type = USB
+[   27.479055] i2c_geni 880000.i2c: i2c error :-107
+[   28.761836] i2c_geni 880000.i2c: i2c error :-107
+[  130.491848] pm6150_charger: usbin_uv_irq_handler: IRQ: usbin-uv
+[  130.493839] [PMIC_DEBUG][usb_plugin_irq_handler]: pd_hard_reset=0
+[  130.494181] pm6150_charger: smblib_update_usb_type: APSD=UNKNOWN PD=0
+[  130.494290] pm6150_charger: smblib_usb_plugin_locked: IRQ: usbin-plugin detached
+[  130.496778] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  130.496832] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  130.502538] USB_ICL: SW_ICL_MAX_VOTER,4 voting on of val=100000
+[  130.502550] USB_ICL: current vote is now 100000 voted by SW_ICL_MAX_VOTER,4, previous voted 500000
+[  130.505743] pm6150_charger: smblib_update_usb_type: APSD=UNKNOWN PD=0
+[  130.506793] USB_ICL: USB_PSY_VOTER,3 voting off of val=0
+[  130.506814] USB_ICL: CTM_VOTER,9 voting off of val=0
+[  130.512001] USB_ICL: CTM_VOTER,9 voting off of val=-1000
+[  130.519206] usbpd usbpd0: USB Type-C disconnect
+[  130.519452] pm6150_charger: smblib_usb_pd_adapter_allowance_override: set USBIN_ALLOW_OVERRIDE: 0
+[  130.519470] pm6150_charger: smblib_update_usb_type: APSD=UNKNOWN PD=0
+[  130.519511] msm-dwc3 a600000.ssusb: vbus:0 event received
+[  130.519615] msm-dwc3 a600000.ssusb: dwc3_resume_work: dwc3 resume work
+[  130.519639] msm-dwc3 a600000.ssusb: XCVR: ID set
+[  130.519652] msm-dwc3 a600000.ssusb: XCVR: BSV clear
+[  130.519664] msm-dwc3 a600000.ssusb: XCVR: SUSP clear
+[  130.519785] msm-dwc3 a600000.ssusb: peripheral state
+[  130.519810] msm-dwc3 a600000.ssusb: !id || !bsv
+[  130.519837] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget dwc3-gadget
+[  130.520487] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  130.520519] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  130.520557] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  130.520860] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[  130.521530] android_work: sent uevent USB_STATE=DISCONNECTED
+[  130.522893] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[  130.523179] msm-dwc3 a600000.ssusb: IOMMU detached
+[  130.523994] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[  130.524261] msm-dwc3 a600000.ssusb: idle state
+[  130.524286] msm-dwc3 a600000.ssusb: Cable disconnected
+[  130.572180] pm6150_charger: smblib_usb_pd_adapter_allowance_override: set USBIN_ALLOW_OVERRIDE: 0
+[  130.635921] dwc3 a600000.dwc3: Unable to dequeue while in LPM
+[  130.638918] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[  130.642347] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:22) took 1ms and failed: symlink() failed: File exists
+[  132.513393] pm6150_charger: usbin_uv_irq_handler: IRQ: usbin-uv
+[  132.513503] [PMIC_DEBUG][usb_plugin_irq_handler]: pd_hard_reset=0
+[  132.516448] pm6150_charger: smblib_usb_plugin_locked: IRQ: usbin-plugin attached
+[  133.252673] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x01
+[  133.252708] pm6150_charger: smblib_update_usb_type: APSD=SDP PD=0
+[  133.252759] USB_ICL: USB_PSY_VOTER,3 voting on of val=500000
+[  133.252767] USB_ICL: SW_ICL_MAX_VOTER,4 voting off of val=0
+[  133.252772] USB_ICL: current vote is now 500000 voted by USB_PSY_VOTER,3, previous voted 100000
+[  133.253250] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x01
+[  133.253694] usbpd usbpd0: typec mode:8 type:4
+[  133.253826] msm-dwc3 a600000.ssusb: vbus:1 event received
+[  133.253911] msm-dwc3 a600000.ssusb: dwc3_resume_work: dwc3 resume work
+[  133.253940] msm-dwc3 a600000.ssusb: XCVR: ID set
+[  133.253946] msm-dwc3 a600000.ssusb: XCVR: BSV set
+[  133.253952] msm-dwc3 a600000.ssusb: XCVR: SUSP clear
+[  133.254079] msm-dwc3 a600000.ssusb: idle state
+[  133.254102] msm-dwc3 a600000.ssusb: b_sess_vld
+[  133.254117] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[  133.254127] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[  133.255458] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  133.257710] msm-dwc3 a600000.ssusb: attached to IOMMU
+[  133.257723] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  133.258274] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_POST_RESET_EVENT received
+[  133.259280] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[  133.259297] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=0
+[  133.259336] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget dwc3-gadget
+[  133.260702] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  133.260727] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  133.260748] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  133.260770] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  133.261454] msm-dwc3 a600000.ssusb: peripheral state
+[  133.267434] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  133.267544] msm-dwc3 a600000.ssusb: Avail curr from USB = 2
+[  133.361770] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  133.361789] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  133.361825] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  133.361871] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[  133.431471] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[  133.465139] android_work: sent uevent USB_STATE=CONNECTED
+[  133.469697] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[  133.469720] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=40004
+[  133.469726] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=40000
+[  133.522804] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  133.522865] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[  133.523766] android_work: sent uevent USB_STATE=CONFIGURED
+[  155.802004] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  155.802082] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  155.802099] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  155.810173] dwc3 a600000.dwc3: request 0000000000000000 was not queued to ep0out
+[  155.815621] init: processing action (init.svc.adbd=stopped) from (/system/etc/init/hw/init.usb.configfs.rc:14)
+[  155.836248] init: processing action (sys.usb.config=* && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:217)
+[  155.836794] init: processing action (sys.usb.config=none && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:220)
+[  155.837207] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:222) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837351] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:223) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837483] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f4' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:224) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837611] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f5' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:225) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837740] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f6' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:226) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837867] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f7' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:227) took 0ms and failed: unlink() failed: No such file or directory
+[  155.837995] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f8' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:228) took 0ms and failed: unlink() failed: No such file or directory
+[  155.838207] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f9' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:229) took 0ms and failed: unlink() failed: No such file or directory
+[  155.838243] init: processing action (sys.usb.config=none && sys.usb.configfs=1) from (/system/etc/init/hw/init.usb.configfs.rc:1)
+[  155.839467] init: Command 'write /config/usb_gadget/g1/UDC none' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:2) took 1ms and failed: Unable to write to file '/config/usb_gadget/g1/UDC': Unable to write file contents: No such device
+[  155.843793] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:8) took 0ms and failed: unlink() failed: No such file or directory
+[  155.843860] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:9) took 0ms and failed: unlink() failed: No such file or directory
+[  155.843923] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:10) took 0ms and failed: unlink() failed: No such file or directory
+[  155.843996] init: Command 'rmdir /config/usb_gadget/g1/functions/rndis.gs4' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:11) took 0ms and failed: rmdir() failed: No such file or directory
+[  155.845125] init: processing action (init.svc.adbd=stopped) from (/system/etc/init/hw/init.usb.configfs.rc:14)
+[  155.887973] init: processing action (sys.usb.config=* && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:217)
+[  155.888662] init: Command 'rm /config/usb_gadget/g1/os_desc/b.1' action=sys.usb.config=* && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:218) took 0ms and failed: unlink() failed: No such file or directory
+[  155.888817] init: processing action (sys.usb.config=mtp && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:1925)
+[  155.894295] init: processing action (sys.usb.config=mtp && sys.usb.configfs=1) from (/system/etc/init/hw/init.usb.configfs.rc:26)
+[  155.904415] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  155.904439] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  155.904448] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  155.904458] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  155.904469] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  155.906196] android_work: sent uevent USB_STATE=DISCONNECTED
+[  155.911073] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  155.911134] msm-dwc3 a600000.ssusb: Avail curr from USB = 2
+[  156.005252] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  156.005265] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  156.005298] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  156.005329] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[  156.073081] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[  156.107525] android_work: sent uevent USB_STATE=CONNECTED
+[  156.195915] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  156.196004] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[  156.196540] android_work: sent uevent USB_STATE=CONFIGURED
+[  157.373314] init: processing action (sys.usb.config=* && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:217)
+[  157.374301] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  157.374467] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  157.374482] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  157.382537] init: processing action (sys.usb.config=none && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:220)
+[  157.383051] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:222) took 0ms and failed: unlink() failed: No such file or directory
+[  157.383281] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:223) took 0ms and failed: unlink() failed: No such file or directory
+[  157.383461] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f4' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:224) took 0ms and failed: unlink() failed: No such file or directory
+[  157.383628] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f5' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:225) took 0ms and failed: unlink() failed: No such file or directory
+[  157.383793] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f6' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:226) took 0ms and failed: unlink() failed: No such file or directory
+[  157.383957] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f7' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:227) took 0ms and failed: unlink() failed: No such file or directory
+[  157.384154] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f8' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:228) took 0ms and failed: unlink() failed: No such file or directory
+[  157.384319] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f9' action=sys.usb.config=none && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:229) took 0ms and failed: unlink() failed: No such file or directory
+[  157.384362] init: processing action (sys.usb.config=none && sys.usb.configfs=1) from (/system/etc/init/hw/init.usb.configfs.rc:1)
+[  157.385494] init: Command 'write /config/usb_gadget/g1/UDC none' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:2) took 1ms and failed: Unable to write to file '/config/usb_gadget/g1/UDC': Unable to write file contents: No such device
+[  157.397231] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:8) took 0ms and failed: unlink() failed: No such file or directory
+[  157.397299] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:9) took 0ms and failed: unlink() failed: No such file or directory
+[  157.397360] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:10) took 0ms and failed: unlink() failed: No such file or directory
+[  157.397425] init: Command 'rmdir /config/usb_gadget/g1/functions/rndis.gs4' action=sys.usb.config=none && sys.usb.configfs=1 (/system/etc/init/hw/init.usb.configfs.rc:11) took 0ms and failed: rmdir() failed: No such file or directory
+[  157.398349] init: processing action (init.svc.adbd=stopped) from (/system/etc/init/hw/init.usb.configfs.rc:14)
+[  157.424619] init: processing action (sys.usb.config=* && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:217)
+[  157.424926] init: Command 'rm /config/usb_gadget/g1/os_desc/b.1' action=sys.usb.config=* && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:218) took 0ms and failed: unlink() failed: No such file or directory
+[  157.425089] init: processing action (sys.usb.config=adb && sys.usb.configfs=1) from (/vendor/etc/init/hw/init.qcom.usb.rc:1911)
+[  157.425352] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1912) took 0ms and failed: unlink() failed: No such file or directory
+[  157.425568] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f2' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1913) took 0ms and failed: unlink() failed: No such file or directory
+[  157.425719] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f3' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1914) took 0ms and failed: unlink() failed: No such file or directory
+[  157.425857] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f4' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1915) took 0ms and failed: unlink() failed: No such file or directory
+[  157.425990] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f5' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1916) took 0ms and failed: unlink() failed: No such file or directory
+[  157.426161] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f6' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1917) took 0ms and failed: unlink() failed: No such file or directory
+[  157.426294] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f7' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1918) took 0ms and failed: unlink() failed: No such file or directory
+[  157.426542] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f8' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1919) took 0ms and failed: unlink() failed: No such file or directory
+[  157.426832] init: Command 'rm /config/usb_gadget/g1/configs/b.1/f9' action=sys.usb.config=adb && sys.usb.configfs=1 (/vendor/etc/init/hw/init.qcom.usb.rc:1920) took 0ms and failed: unlink() failed: No such file or directory
+[  157.430281] init: processing action (sys.usb.config=adb && sys.usb.configfs=1) from (/system/etc/init/hw/init.usb.configfs.rc:17)
+[  157.468441] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:20)
+[  157.484715] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  157.484736] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  157.484744] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  157.484754] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  157.484764] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  157.486134] android_work: sent uevent USB_STATE=DISCONNECTED
+[  157.491952] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  157.492147] msm-dwc3 a600000.ssusb: Avail curr from USB = 2
+[  157.586069] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_OTG_EVENT received
+[  157.586086] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  157.586134] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[  157.586176] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[  157.653861] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[  157.688736] android_work: sent uevent USB_STATE=CONNECTED
+[  157.746895] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_SET_CURRENT_DRAW_EVENT received
+[  157.746961] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[  157.747962] android_work: sent uevent USB_STATE=CONFIGURED
+[  171.566268] q6asm_callback: cmd = 0x10bcd returned error = 0x1
+[  171.566352] __q6asm_cmd: DSP returned error[ADSP_EFAILED] opcode 68557
+[  171.662687] q6asm_callback: cmd = 0x10bcd returned error = 0x1
+[  171.662781] __q6asm_cmd: DSP returned error[ADSP_EFAILED] opcode 68557
+[  172.667274] q6asm_callback: cmd = 0x10bcd returned error = 0x1
+[  172.667359] __q6asm_cmd: DSP returned error[ADSP_EFAILED] opcode 68557
+[  172.763601] q6asm_callback: cmd = 0x10bcd returned error = 0x1
+[  172.763698] __q6asm_cmd: DSP returned error[ADSP_EFAILED] opcode 68557
+[  258.158303] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x11
+[  258.158346] pm6150_charger: smblib_update_usb_type: APSD=SDP PD=0
+[  258.158478] pm6150_charger: usb_source_change_irq_handler: APSD_STATUS = 0x11
+[  258.159431] usbpd usbpd0: typec mode:8 type:4
